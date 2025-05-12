@@ -19,6 +19,7 @@ import path from 'path';
 import viewRouter from './routes/viewRoute.js';
 import cookieParser from 'cookie-parser';
 import bookingRouter from './routes/bookingRoutes.js';
+import compression from 'compression';
 
 const app = express();
 
@@ -131,6 +132,8 @@ app.use(
   }),
 ); //hpp -> ignore first params & use last one
 
+//To compress text on clients req.
+app.use(compression());
 //Serving Static files
 app.use(express.static('public'));
 

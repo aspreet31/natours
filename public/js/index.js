@@ -13,13 +13,11 @@ const userPasswordForm = document.querySelector('.form-user-password');
 const bookBtn = document.querySelector('#book-tour');
 
 if (loginForm) {
-  console.log('login running');
   loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     //VALUES
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    console.log('running loginform');
     login(email, password);
   });
 }
@@ -29,7 +27,6 @@ if (logOutButton) {
 }
 
 if (signUpForm) {
-  console.log('signup running');
   signUpForm.addEventListener('submit', (e) => {
     e.preventDefault();
     //VALUES

@@ -12625,7 +12625,7 @@ function _login() {
           _context2.next = 3;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://localhost:3000/api/v1/users/login',
+            url: '/api/v1/users/login',
             data: {
               email: email,
               password: password
@@ -12664,7 +12664,7 @@ var logout = exports.logout = /*#__PURE__*/function () {
           _context.next = 3;
           return (0, _axios.default)({
             method: 'GET',
-            url: 'http://localhost:3000/api/v1/users/logout'
+            url: '/api/v1/users/logout'
           });
         case 3:
           res = _context.sent;
@@ -12703,7 +12703,7 @@ function _signUp() {
           _context3.next = 3;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://localhost:3000/api/v1/users/signup',
+            url: '/api/v1/users/signup',
             data: userData,
             withCredentials: true
           });
@@ -12753,7 +12753,7 @@ var updateSettings = exports.updateSettings = /*#__PURE__*/function () {
           _context.prev = 0;
           console.log(data);
           console.log(type);
-          url = type === 'password' ? 'http://localhost:3000/api/v1/users/updatePassword' : 'http://localhost:3000/api/v1/users/updateMe';
+          url = type === 'password' ? '/api/v1/users/updatePassword' : '/api/v1/users/updateMe';
           _context.next = 6;
           return (0, _axios.default)({
             method: 'PATCH',
@@ -12972,13 +12972,11 @@ var userDataForm = document.querySelector('.form-user-data');
 var userPasswordForm = document.querySelector('.form-user-password');
 var bookBtn = document.querySelector('#book-tour');
 if (loginForm) {
-  console.log('login running');
   loginForm.addEventListener('submit', function (e) {
     e.preventDefault();
     //VALUES
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-    console.log('running loginform');
     (0, _login.login)(email, password);
   });
 }
@@ -12986,7 +12984,6 @@ if (logOutButton) {
   logOutButton.addEventListener('click', _login.logout);
 }
 if (signUpForm) {
-  console.log('signup running');
   signUpForm.addEventListener('submit', function (e) {
     e.preventDefault();
     //VALUES
@@ -13062,7 +13059,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52152" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53027" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
