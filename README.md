@@ -19,7 +19,7 @@ This project is developed with a focus on:
 - Tour Booking using Stripe API
 - Image Uploading & Resizing with Multer + Sharp
 - Geo-based tour search
-- API Documentation using Postman
+
 
 ## Getting Started
 
