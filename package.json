@@ -45,6 +45,7 @@
     "nodemailer": "^6.10.0",
     "nodemailer-brevo-transport": "^2.2.0",
     "pug": "^3.0.3",
+    "serverless-http": "^3.2.0",
     "sharp": "^0.34.1",
     "slugify": "^1.6.6",
     "stripe": "^18.1.0",
