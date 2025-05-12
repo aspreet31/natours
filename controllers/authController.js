@@ -12,7 +12,9 @@ const signToken = (id) => {
 };
 
 const cookieOptions = {
-  expires: process.env.COOKIE_EXPIRES,
+  expires: new Date(
+    Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000,
+  ),
   httpOnly: true, //so that cookie can only read , not change
 };
 // if (process.env.NODE_ENV === 'PRODUCTION') cookieOptions.secure = true; //to run on secure connections like https
