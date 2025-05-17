@@ -19,7 +19,7 @@ const cookieOptions = {
   ),
   httpOnly: true, //so that cookie can only read not change
 };
-// if (process.env.NODE_ENV === 'PRODUCTION') cookieOptions.secure = true; //to run on secure connections like https
+if (process.env.NODE_ENV.trim() === 'production') cookieOptions.secure = true; //to run on secure connections like https
 
 const createSendToken = (statusCode, user, res) => {
   const token = signToken(user._id);
