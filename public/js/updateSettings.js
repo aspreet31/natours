@@ -4,8 +4,6 @@ import { showAlert } from './alerts';
 // type is either 'password' or 'data'
 export const updateSettings = async (data, type) => {
   try {
-    console.log(data);
-    console.log(type);
     const url =
       type === 'password'
         ? '/api/v1/users/updatePassword'
@@ -20,6 +18,7 @@ export const updateSettings = async (data, type) => {
     if (res.data.status === 'success') {
       showAlert('success', `${type.toUpperCase()} updated successfully!`);
     }
+    window.location.assign('me');
   } catch (err) {
     showAlert('error', err.response.data.message);
   }
