@@ -12989,17 +12989,14 @@ if (signUpForm) {
     //VALUES
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
-    var role = document.getElementById('role').value;
     var passwordConfirm = document.getElementById('passwordConfirm').value;
     var password = document.getElementById('password').value;
     var form = {
       name: name,
       email: email,
-      role: role,
       passwordConfirm: passwordConfirm,
       password: password
     };
-    console.log(form);
     (0, _login.signUp)(form);
   });
 }
@@ -13059,7 +13056,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53027" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58790" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

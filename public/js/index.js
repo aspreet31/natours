@@ -32,18 +32,15 @@ if (signUpForm) {
     //VALUES
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const role = document.getElementById('role').value;
     const passwordConfirm = document.getElementById('passwordConfirm').value;
     const password = document.getElementById('password').value;
 
     const form = {
       name,
       email,
-      role,
       passwordConfirm,
       password,
     };
-    console.log(form);
     signUp(form);
   });
 }
